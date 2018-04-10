@@ -8,9 +8,9 @@ import WeatherIcon from './WeatherIcon.jsx'
 class WeatherRow extends React.Component {
     render(){
         var date = moment(this.props.report.dt_txt).format('HH:mm');
-        var daty = moment(this.props.report.dt_txt).diff(moment(), "days");
         var temp = Math.floor(this.props.report.main.temp) + '°C';
-        var prec = this.props.report.rain ? this.props.report.rain['3h'] : 0;
+        var prec = this.props.report.rain && this.props.report.rain['3h']
+             ? this.props.report.rain['3h'] : 0;
         var rain = (Math.round(prec * 100) / 100) + ' mm';
         var cond = this.props.report.weather[0].id
         return(
