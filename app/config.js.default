@@ -1,0 +1,10 @@
+const config = {
+    weather : {
+        appid   : 'ENTERAPPID',
+    },
+    putzplan : {
+        flatmates   : [ 'ENTER', 'YOUR', 'ROOMMATES'],
+    },
+}
+
+export default config;
