@@ -27,7 +27,8 @@ class Timetable extends React.Component {
                 var d = new Date();
                 var t = d.getTime();
                 if (response.status === 200) {
-                    response.data.map((timerow) => {
+                    response.data.map((timerow,index) => {
+                        timerow.id = index;
                         timerow.live_mins = Math.round((timerow.live - (t / 1000)) / 60);
                         timerow.delay_mins = Math.round((timerow.live - timerow.arrival) / 60);
                     });
@@ -62,7 +63,7 @@ class Timetable extends React.Component {
                         .map((row) => {
                             return (
                             <TimeRow
-                                key={String(row.arrival) + String(row.live)}
+                                key={row.id}
                                 row={row}
                             />
                             );
