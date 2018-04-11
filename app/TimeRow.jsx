@@ -1,6 +1,7 @@
 import React from 'react';
 import { ListItem, ListItemText } from 'material-ui/List';
 import Avatar from 'material-ui/Avatar';
+import Typography from 'material-ui/Typography';
 import withStyles from 'material-ui/styles/withStyles';
 
 const styles = theme => ({
@@ -40,7 +41,9 @@ class TimeRow extends React.Component {
                 >
                     {this.props.row.route}
                 </StyledAvatar>
-                <ListItemText primary={this.props.row.destination} />
+                <ListItemText>
+                    <Typography noWrap>{this.props.row.destination}</Typography>
+                </ListItemText>
                 <StyledAvatar
                     color={this.props.row.live_mins > 3 ? 'disabled' : 'secondary'}
                 >

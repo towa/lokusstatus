@@ -38,23 +38,9 @@ function App() {
     return (
         <MuiThemeProvider theme={theme}>
             <div style={{margin : 8}}>
-                <Grid container alignItems="stretch" spacing={8}>
-                    <Grid item xs={12} sm={3}>
-                        <Grid container alignItems="stretch" spacing={8}>
-                            <Grid item xs={12}>
-                                <Timetable stop="KTH" title="Kaiser*innenthermen"/>
-                            </Grid>
-                        </Grid>
-                    </Grid>
-                    <Grid item xs={12} sm={3}>
-                        <Grid container spacing={8}>
-                            <Grid item xs={12}>
-                                <Timetable stop="GIL" title="Gilbertstrasze"/>
-                            </Grid>
-                        </Grid>
-                    </Grid>
-                    <Grid item xs={12} sm={3}>
-                        <Grid container spacing={8}>
+                <Grid container style={{flexGrow : 1}} spacing={8}>
+                    <Grid item xs={12} lg={3}>
+                        <Grid container  alignItem="stretch" spacing={8}>
                             <Grid item xs={12}>
                                 <Clock discobeats color="primary"/>
                             </Grid>
@@ -63,13 +49,27 @@ function App() {
                             </Grid>
                         </Grid>
                     </Grid>
-                    <Grid item xs={12} sm={3}>
+                    <Grid item xs={12} lg={3}>
                         <Grid container spacing={8}>
                             <Grid item xs={12}>
                                 <Clock color="secondary"/>
                             </Grid>
                             <Grid item xs={12}>
                                 <Putzplan/>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                    <Grid item xs={12} lg={3}>
+                        <Grid container alignItems="stretch" spacing={8}>
+                            <Grid item xs={12}>
+                                <Timetable stop="KTH" title="Kaiser*innenthermen"/>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                    <Grid item xs={12} lg={3}>
+                        <Grid container spacing={8}>
+                            <Grid item xs={12}>
+                                <Timetable stop="GIL" title="Gilbertstrasze"/>
                             </Grid>
                         </Grid>
                     </Grid>
