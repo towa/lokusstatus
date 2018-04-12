@@ -1,8 +1,8 @@
 import React from 'react';
-import Timetable from './Timetable.jsx';
-import WeatherReport from './WeatherReport.jsx';
-import Putzplan from './Putzplan.jsx';
-import Clock from './Clock.jsx';
+import Timetable from './plugins/Bus';
+import WeatherReport from './plugins/Weather';
+import Putzplan from './plugins/Putzplan';
+import Clock from './plugins/Clock';
 import Grid from 'material-ui/Grid';
 import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles';
 

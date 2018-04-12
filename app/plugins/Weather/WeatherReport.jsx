@@ -5,7 +5,7 @@ import Typography from 'material-ui/Typography';
 import Paper from 'material-ui/Paper';
 import WeatherRow from './WeatherRow.jsx';
 import moment from 'moment';
-import config from './config.js'
+import config from '../../config.js';
 
 
 class WeatherReport extends React.Component {

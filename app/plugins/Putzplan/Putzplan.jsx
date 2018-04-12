@@ -2,7 +2,7 @@ import React from 'react';
 import Typography from 'material-ui/Typography';
 import Paper from 'material-ui/Paper';
 import moment from 'moment';
-import config from './config.js';
+import config from '../../config.js';
 
 const flatMates = config.putzplan.flatmates;
 
