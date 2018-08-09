@@ -23,9 +23,9 @@ class Putzplan extends React.Component {
             putzplan : {
                 bathroom        : flatMates[(weeks + 1) % 5],
                 kitchen         : flatMates[(weeks + 2) % 5],
-                livingroom      : flatMates[(weeks + 3) % 5],
-                free            : flatMates[(weeks + 4) % 5]
-                + ' & ' + flatMates[(weeks + 5) % 5],
+                livingroom      : flatMates[(weeks + 4) % 5],
+                free            : flatMates[(weeks + 5) % 5]
+                + ' & ' + flatMates[(weeks + 3) % 5],
             },
         });
         
